@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @font-face {
+      font-family: "Uni Neue";
+      src: local("Uni Neue Bold"), local("Uni-Neue-Bold"),
+        url("UniNeueBold.woff2") format("woff2"),
+        url("UniNeueBold.woff") format("woff"),
+        url("UniNeueBold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./css/style.css"/>
+  <link rel="stylesheet" href="./css/adaptive.css">
+</head>
+
+<body>
+  <section class="form">
+    <div class="container">
+      <img class="form__image" src="./RelicsOfAMortalPast-NFT1.png" alt=""/>
+      <div class="flex-container">
+        <form>
+          <h2>Welcome to marketplace</h2>
+          <p class="subtitle">Create your account</p>
+          <div class="form__item">
+            <label for="name">Full name</label><br/>
+            <input type="text" id="name" name="name" placeholder="Nodo"/><br/>
+          </div>
+          <div class="form__item">
+            <label for="email">Email</label><br/>
+            <input type="email" name="email" id="email" placeholder="Nodarimekvasfebvilli@gmail.com"/><br/>
+          </div>
+          <div class="form__item">
+            <label for="password">Password</label><br/>
+            <div class="form__item-hide_text">
+              <input type="password" name="password" class="password-input" placeholder="8+ Strong character"/>
+              <img class="visibility-off" src="./outline_visibility_off_white_24dp.png" alt=""/>
+              <img class="visibility-on" src="./outline_visibility_white_24dp.png" alt=""/>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="rep_password">Repeat password</label>
+            <div class="form__item-hide_text">
+              <input type="password" name="rep_password" class="password-input" placeholder="8+ Strong character"/>
+              <img class="visibility-off" src="./outline_visibility_off_white_24dp.png" alt=""/>
+              <img class="visibility-on" src="./outline_visibility_white_24dp.png" alt=""/>
+            </div>
+          </div>
+          <div class="form__checkbox-items">
+            <input class="form__checkbox" type="checkbox" name="agreement" id="agreement"/>
+            <label class="form__checkbox-label" for="agreement"></label>
+            <label for="agreement">I agree terms & conditions</label>
+          </div>
+          <input class="button" type="button" value="Create an account">
+          <div class="text-container">
+            <p class="already-have">Already have an account ? <a class="yellow__span" href="#">Sign in</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

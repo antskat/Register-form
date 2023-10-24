@@ -1,0 +1,187 @@
+/* ~~~~~~~~~~~~ Сброс стилів ~~~~~~~~~~~~ */
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body {
+  overflow: hidden;
+  background-color: #0c172c;
+}
+body:before {
+  content: "";
+  position: absolute;
+  height: 151px;
+  width: 151px;
+  background-color: #d0a920;
+  filter: blur(135px);
+  border-radius: 50%;
+  right: -71px;
+  bottom: -71px;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Общі стилі */
+.button {
+  border: none;
+  border-radius: 10px;
+  background: #27395b;
+  padding: 25px 172px;
+  color: #d0a920;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+}
+h2 {
+  color: #fff;
+  font-family: Uni Neue;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.yellow__span {
+  text-decoration: none;
+  color: #d0a920;
+}
+/* ~~~~~~~~~~~~~~~~ Форма ~~~~~~~~~~~~~~~ */
+.form {
+  background: #0c172c;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 145px;
+  text-align: left;
+}
+/* ------------ Чекбокс ------------ */
+.form__checkbox-items {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+/* Ховаємо оригінальний чекбокс */
+.form__checkbox {
+  display: none;
+}
+/* Стилізуємо мітку (label) */
+.form__checkbox-label {
+  position: relative;
+  top: -12px;
+  padding-left: 30px; /* резервуємо місце під галочку */
+  cursor: pointer;
+  line-height: 24px; /* Встановлюємо висоту рядка для вирівнювання галочки */
+}
+/* Стилізація галочки (SVG іконка) */
+.form__checkbox-label::before {
+  content: ""; /* Додайте цей рядок для встановлення контенту */
+  width: 24px; /* ширина галочки */
+  height: 24px; /* висота галочки */
+  background-color: antiquewhite;
+  border-radius: 5px; /* закруглені кути галочки */
+  transition: 0.1s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* Стилізація галочки в стані "провірено" */
+.form__checkbox:checked + .form__checkbox-label::before {
+  content: "\2713"; /* Unicode символ для галочки (✓) */
+  font-size: 14px; /* Розмір шрифту для символу галочки */
+  text-align: center; /* Вирівнювання тексту по центру */
+  line-height: 24px; /* Встановлюємо висоту рядка для вирівнювання символу галочки */
+  color: #000; /* Колір галочки в стані "провірено" */
+  background-color: #d0a920;
+}
+
+/* ---- Основна декорація інпуту ---- */
+.subtitle,
+label,
+input::placeholder,
+input {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 23px;
+}
+label {
+  color: #adadad;
+}
+input::placeholder {
+  position: relative;
+  top: -3px;
+  color: #fff;
+}
+input {
+  margin-top: 15px;
+  width: 496px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #595959;
+  margin-bottom: 34px;
+}
+input:focus {
+  outline: none;
+  /* box-shadow: 0px -2px 5px 0px rgba(255,255,255,0.61) inset;
+-webkit-box-shadow: 0px -2px 5px 0px rgba(255,255,255,0.61) inset;
+-moz-box-shadow: 0px -2px 5px 0px rgba(255,255,255,0.61) inset; */
+}
+/* ---- Інпут зі скриттям тексту ---- */
+.form__item-hide_text {
+  display: flex;
+}
+.visibility-off {
+  position: relative;
+  top: 17px;
+  left: -25px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.visibility-on {
+  position: relative;
+  top: 17px;
+  left: -25px;
+  height: 20px;
+  width: 20px;
+  display: none;
+  cursor: pointer;
+}
+.text-container {
+  text-align: center;
+}
+.already-have {
+  color: #f0f0f0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
