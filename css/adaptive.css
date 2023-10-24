@@ -19,6 +19,9 @@
 }
 
 @media (max-width: 425px) {
+    body {
+        overflow: scroll;
+    }
     form {
         padding-top: 45px;
         width: 425px;
